@@ -1,0 +1,102 @@
+header.main-header.fixed-top
+    .container-fluid.bg-light-blue.header-menu
+        .container.d-flex.px-0
+            ul.nav.d-none.d-md-flex
+                li.nav-item
+                    a.nav-link.pl-0(href="#")
+                        i.fas.fa-phone.pr-1
+                        | (028) 3930 3279
+                li.nav-item
+                    a.nav-link.pl-0(href="#")
+                        i.fas.fa-mobile-alt.pr-1
+                        | 0906 22 99 66 | 0838 22 99 66 
+            //- a.logo(href="./index.html")
+                //- img(src="../assets/logo.png", alt="")
+            ul.nav.ml-auto.pr-2
+                li.nav-item
+                    a.nav-link(href="#") Sơ đồ website
+                li.nav-item
+                    a.nav-link(href="#") Giới thiệu
+                li.nav-item
+                    a.nav-link(href="#") Hướng dẫn
+                li.nav-item
+                    a.nav-link(href="#") RSS
+                li.nav-item
+                    a.nav-link(href="#") Widget
+                li.nav-item
+                    a.nav-link(href="#" data-toggle="modal" data-target="#modalLogin")
+                        i.fas.fa-user.pr-1
+                        | User
+    .navbar.navbar-expand-md.navbar-dark.bg-dark.scrolling-navbar
+        .container.px-0
+            a.navbar-brand(href="./index.html")
+                span.text-uppercase Thư viện pháp luật
+                //- img(src="../assets/logo.png", alt="")
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+
+            .collapse.navbar-collapse#navbarSupportedContent
+                ul.navbar-nav.ml-auto
+                    li.nav-item
+                        a.nav-link(href="#")
+                            |Trang chủ
+                            span.sr-only (current)
+                    li.nav-item
+                        a.nav-link(href="#") Dịch vụ
+                    li.nav-item.dropdown
+                        a.nav-link.dropdown-toggle(href="#" id="navbarDropdownNews" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Tin tức
+                        .dropdown-menu.mega-menu(aria-labelledby="navbarDropdownNews")
+                            .container.px-0
+                                .row.pt-3
+                                    .col-md-4.mb-3
+                                        h5 
+                                            a(href="#") Thông báo văn bản mới
+                                    .col-md-4.mb-3
+                                        h5 
+                                            a(href="#") Hiệp định thương mại
+                                        ul
+                                            li
+                                                a(href="#") Hiệp định TPP
+                                            li
+                                                a(href="#") Hiệp định EVFTA
+                                            li
+                                                a(href="#") Hiệp định RCEP
+                                            li
+                                                a(href="#") Hiệp định CPTPP
+                                    .col-md-4.mb-3
+                                        h5 
+                                            a(href="#") Thời sự
+                                    .col-md-4.mb-3
+                                        h5 
+                                            a(href="#") Chính sách mới
+                                    .col-md-4.mb-3
+                                        h5 
+                                            a(href="#") Án lệ
+                                    .col-md-4.mb-3
+                                        h5 
+                                            a(href="#") Tư vấn của luật sư
+                    li.nav-item
+                        a.nav-link(href="./login.html") Cộng đồng
+                    li.nav-item
+                        a.nav-link(href="./login.html") Liên hệ
+                    
+//- MODAL LOGIN
+#modalLogin.modal.fade(tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true")
+    .modal-dialog(role="document")
+        .modal-content
+            .modal-header
+                h5.modal-title.w-100.text-center.text-white.font-bolder#modalLoginLabel Login
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span.text-white(aria-hidden="true") &times;
+            .modal-body
+                form.form-group.needs-validation.pt-4(action="#" novalidate)
+                    .form-group
+                        input.form-control(type="text" aria-describedby="username" placeholder="Tên đăng nhập hoặc email" required)
+                        .invalid-feedback Sai tên đăng nhập hoặc email
+                    .form-group
+                        input.form-control(type="text" aria-describedby="password" placeholder="Nhập password" required)
+                        .invalid-feedback Sai password
+                    .form-group.text-right
+                        button.btn.btn-outline-primary(type="submit") Đăng nhập
+                    .form-group.text-right
+                            a.text-blue.nowrap(href="./forget_password.html") Quên mật khẩu?

@@ -1,0 +1,364 @@
+extends ../layouts/layout.pug
+
+include ../mixins/_modal.pug
+include ../mixins/_tab.pug
+block hero-banner
+    include ../partials/banner.pug
+block append content
+    .container-fluid.search-wrapper
+        .container
+            .row.d-flex.justify-content-center
+                .col-lg-8
+                    h2.text-white.font-bolder.text-uppercase.text-center.py-4 Tra cứu
+                    .custom-tabs
+                        +tabs([{id:'VB',name:'Văn bản'},{id:'DT',name:'Dự Thảo'},{id:'CV',name:'Công văn'},{id:'TC',name:'Tiêu chuẩn'},{id:'VP',name:'Vi phạm'},{id:'TN',name:'Thuật ngữ'}])
+                            +tab-item('VB','true')
+                                p Từ khoá: Số Hiệu, Tiêu đề hoặc Nội dung ngắn gọn của Văn Bản...
+                                .input-group.mb-3
+                                    input.form-control(type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2")
+                                    .input-group-append
+                                        button.btn.btn-secondary(type="button" id="button-addon2") Tìm kiếm
+                            +tab-item('DT')
+                                p Từ khoá: Số Hiệu, Tiêu đề hoặc Nội dung ngắn gọn của Dự thảo...
+                                .input-group.mb-3
+                                    input.form-control(type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2")
+                                    .input-group-append
+                                        button.btn.btn-secondary(type="button" id="button-addon2") Tìm kiếm
+                            +tab-item('CV')
+                                p Từ khoá: Số Hiệu, Tiêu đề hoặc Nội dung ngắn gọn của Công văn...
+                                .input-group.mb-3
+                                    input.form-control(type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2")
+                                    .input-group-append
+                                        button.btn.btn-secondary(type="button" id="button-addon2") Tìm kiếm
+                            +tab-item('TC')
+                                p Từ khoá: Số Hiệu, Tiêu đề hoặc Nội dung ngắn gọn của Tiêu Chuẩn Việt Nam...
+                                .input-group.mb-3
+                                    input.form-control(type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2")
+                                    .input-group-append
+                                        button.btn.btn-secondary(type="button" id="button-addon2") Tìm kiếm
+                            +tab-item('VP')
+                                p Tra cứu xử phạt vi phạm hành chính
+                                .input-group.mb-3
+                                    input.form-control(type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2")
+                                    .input-group-append
+                                        button.btn.btn-secondary(type="button" id="button-addon2") Tìm kiếm
+                            +tab-item('TN')
+                                p Tìm theo thuật ngữ Pháp luật
+                                .input-group.mb-3
+                                    input.form-control(type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2")
+                                    .input-group-append
+                                        button.btn.btn-secondary(type="button" id="button-addon2") Tìm kiếm
+        .news-event
+            .wrapper
+                .news-left
+                    h2 
+                        | Thông báo &amp; 
+                        br
+                        | Thời sự pháp luật
+                    p
+                        a.pl-3(href="#") Xem tất cả bản tin
+            .news-slider
+                .news-list
+                    a(href="#")
+                        .news-type Thông báo văn bản mới
+                        h3 Xác định giá trong hoạt động quy hoạch
+                        p Ngày 15/11/2018, Bộ Tài chính ban hành Thông tư 113/2018/TT-BTC quy định về xác định giá trong hoạt động quy hoạch được sử dụng từ vốn đầu tư công và ...
+                .news-list
+                    a(href="#")
+                        .news-type Thời sự pháp luật
+                        h3 Toàn cảnh chương trình giáo dục phổ thông mơi
+                        p lChiều 27-12, Bộ GD-ĐT công bố chương trình giáo dục phổ thông mới. Chương trình được xây dựng theo mô hình phát triển năng lực...
+                .news-list
+                    a(href="#")
+                        .news-type Thông báo văn bản mới
+                        h3 Hướng dẫn hồ sơ hưởng chế độ người có công đang ở nước ngoài
+                        p Bộ Quốc phòng ban hành Thông tư 170/2018/TT-BQP hướng dẫn Nghị định 102/2018/NĐ-CP về chế độ hỗ trợ người Việt Nam có công với cách mạng...
+                .news-list
+                    a(href="#")
+                        .news-type Thời sự pháp luật
+                        h3 Tháo điểm nghẽn PPP để hút FDI vào cơ sở hạ tầng
+                        p Ngày 10/5/2018, Chính phủ đã có Nghị quyết số 54/NQ-CP thông qua các chính sách của đề nghị xây dựng Dự án Luật PPP và ...
+    .container-fluid.bg-section-dark.mt-3
+        .container.px-0
+            .row.no-gutters
+                .col.d-flex.flex-nowrap
+                    aside.sidebar
+                        ul.nav.flex-column
+                            li.nav-item
+                                a.nav-link(href="#") Tra cứu văn bản
+                            li.nav-item
+                                a.nav-link(href="#") Tra cứu dự thảo
+                            li.nav-item
+                                a.nav-link(href="#") Văn bản mới ban hành
+                            li.nav-item
+                                a.nav-link(href="#") Tra cứu tiêu chuẩn
+                            li.nav-item
+                                a.nav-link(href="#") Tra cứu xử phạt vi phạm hành chính
+                            li.nav-item
+                                a.nav-link(href="#") Luật sư toàn quốc
+                            li.nav-item
+                                a.nav-link(href="#") Thuật ngữ pháp lý
+                            li.nav-item
+                                a.nav-link(href="#") Biểu thuế WTO
+                            li.nav-item
+                                a.nav-link(href="#") Biểu thuế ASEAN
+                            li.nav-item
+                                a.nav-link(href="#") Bảng giá đất
+                            li.nav-item
+                                a.nav-link(href="#") Website ngành luật
+                            li.nav-item
+                                a.nav-link(href="#") HTKK - Hỗ trợ kê khai
+                            li.nav-item
+                                a.nav-link(href="#") Tra cứu mẫu hợp đồng
+                            li.nav-item
+                                a.nav-link(href="#") Hiệp định CPTPP
+                            li.nav-item
+                                a.nav-link(href="#") Cộng đồng ASEAN
+                            
+                    .content-wrapper.pl-3
+                        .tab-wrapper
+                            +tabs([{id: 'VBPL',name: 'Văn bản Pháp Luật mới'},{id: 'CVM', name: 'Công văn mới'},{id: 'TCVN', name: 'Tiêu chuẩn (TCVN) mới'},{id: 'DTM', name: 'Dự thảo mới'}])         
+                                +tab-item('VBPL','true')
+                                    .article
+                                        .article_order 1
+                                        .article_content
+                                            .article_title Thông báo 476/TB-VPCP năm 2018 về ý kiến kết luận của Phó Thủ tướng Vương Đình Huệ tại cuộc họp về nội dung Sách trắng Doanh nghiệp Việt Nam năm 2017 do Văn phòng Chính phủ ban hành
+                                            .article_control
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span 
+                                                |Tình trạng: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                    .article
+                                        .article_order 2
+                                        .article_content
+                                            .article_title Thông tư 32/2018/TT-BGDĐT về Chương trình giáo dục phổ thông do Bộ trưởng Bộ Giáo dục và Đào tạo ban hành
+                                            .article_control
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span 
+                                                |Tình trạng: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                    .article
+                                        .article_order 3
+                                        .article_content
+                                            .article_title Thông tư 29/2018/TT-BLĐTBXH về Quy chuẩn kỹ thuật quốc gia về an toàn lao động khi làm việc trong không gian hạn chế do Bộ trưởng Bộ Lao động - Thương binh và Xã hội ban hành
+                                            .article_control
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span 
+                                                |Tình trạng: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                    .article
+                                        .article_order 4
+                                        .article_content
+                                            .article_title Chỉ thị 11/CT-UBND năm 2018 về tăng cường chỉ đạo tổ chức Tổng điều tra dân số và nhà ở năm 2019 trên địa bàn tỉnh Hà Nam
+                                            .article_control    
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span 
+                                                |Tình trạng: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                    .article
+                                        .article_order 5
+                                        .article_content
+                                            .article_title Quyết định 5382/QĐ-UBND năm 2018 về phê duyệt Đề án phát triển vận tải hành khách bằng xe taxi, xe điện trên địa bàn tỉnh Quảng Ninh đến năm 2020, tầm nhìn đến năm 2030
+                                            .article_control    
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span 
+                                                |Tình trạng: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                +tab-item('CVM')
+                                    .article
+                                        .article_order 1
+                                        .article_content
+                                            .article_title Công văn 12539/VPCP-CN năm 2018 về chỉ đạo kiểm tra bảo đảm an toàn hàng không do Văn phòng Chính phủ ban hành
+                                            .article_control
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                    .article
+                                        .article_order 2
+                                        .article_content
+                                            .article_title Công văn 84485/CT-TTHT năm 2018 về chính sách thuế thu nhập doanh nghiệp do Cục Thuế thành phố Hà Nội ban hành
+                                            .article_control
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                    .article
+                                        .article_order 3
+                                        .article_content
+                                            .article_title Công văn 12527/VPCP-KSTT năm 2018 về xử lý thông tin báo chí phản ánh hành vi gây khó khăn cho người dân trong giải quyết thủ tục đăng ký khai tử do Văn phòng Chính phủ ban hành
+                                            .article_control
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                    .article
+                                        .article_order 4
+                                        .article_content
+                                            .article_title Công văn 5420/LĐTBXH-VP năm 2018 công bố lịch tiếp công dân của Bộ trưởng năm 2019 do Bộ Lao động - Thương binh và Xã hội ban hành
+                                            .article_control    
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                    .article
+                                        .article_order 5
+                                        .article_content
+                                            .article_title Công văn 7585/TCHQ-TXNK năm 2018 về cấn trừ lệ phí hải quan hàng xuất nhập khẩu trị giá thấp trên hệ thống VNACCS do Tổng cục Hải quan ban hành
+                                            .article_control    
+                                                a(href="#") Tiếng Anh
+                                                a(href="#") Văn bản gốc
+                                                a(href="#") Lược đồ 
+                                                a(href="#") Liên quan hiệu lực
+                                                a(href="#") Tải về
+                                        .article_status
+                                            span Ban hành: 26/12/2018
+                                            span 
+                                                |Hiệu lực: 
+                                                a.text-tomato(href="#") Đã biết
+                                            span Cập nhật: 28/12/2018
+                                +tab-item('TCVN')
+                                    h1 tab 3 content
+                                +tab-item('DTM')
+                                    h1 tab 4 content
+    .container-fluid
+        .row.boxes.justify-content-between
+            .box.box-blue
+                h2.font-bolder.text-shadow
+                    |Luật sư 
+                    br
+                    |tư vấn
+                a.btn.btn-outline-primary(href="#") Xem thêm
+            .box.box-darkblue
+                h2.font-bolder.text-shadow 
+                    |Pháp lý 
+                    br
+                    |khởi nghiệp
+                a.btn.btn-outline-primary(href="#") Xem thêm
+            .box.box-smoke
+                h2.font-bolder.text-shadow
+                    |Hỏi đáp 
+                    br
+                    |Pháp luật
+                a.btn.btn-outline-primary(href="#") Xem thêm
+            .box.box-black
+                h2.font-bolder.text-shadow
+                    |Bản án 
+                    br
+                    |online
+                a.btn.btn-outline-primary(href="#") Xem thêm
+    
+    .container
+        
+block script-append
+    script.
+        /*** Slick Slider for News & Events ***/
+        $('.news-slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1025,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        dots: false,
+                        variableWidth: false
+                    }
+                },
+            ]
+        });
+
+    

@@ -1,0 +1,84 @@
+$green: seagreen;
+$olive: olive;
+$orange: orange;
+$tomato: tomato;
+$blue: dodgerblue;
+$white: #fff;
+$border: #ccc;
+$black: #333;
+$bg-lighten: 35%;
+$bg-body: #f4f4f4;
+$bg-content-wrapper: #EBEDEE;
+$bg-dark: #002B32;
+$dark-color: #252629;
+$grey: #ababab;
+$bg-tab: #1a656a;
+$bg-tab-hover: #88c426;
+$mega-link: #616161;
+// TEST COLORS
+$primary-color: #C0CD30;
+$secondary-color: #48A8C0;
+$third-color: #14656B;
+$fourth-color: #333F48;
+$fifth-color: #1D1D1D;
+
+$white-transparent: rgba(255,255,255,.9);
+
+$footer: #14656B;
+$copy-right: #333F48;
+
+$footer-link: #26c6da;
+$footer-link-hover: #ffa726;
+
+// END TEST COLORS
+
+// TEXTs
+$text-colors: () !default;
+$text-colors: map-merge((
+    "text-green": $green,
+    "text-olive": $olive,
+    "text-orange": $orange,
+    "text-tomato": $tomato,
+    "text-blue": $third-color,
+    "text-white": $white
+), $text-colors);
+
+@each $name,$color in $text-colors{
+    .#{$name}{
+        color: $color;
+    }
+}
+
+
+// BACKGROUNDS
+$bg-colors: () !default;
+$bg-colors: map-merge((
+    "bg-light": $white,
+    "bg-light-blue": rgba($secondary-color,0.1),
+    "bg-footer": $footer,
+    "bg-copy-right": $copy-right,
+    "bg-section-dark": $bg-dark,
+    "box-blue": $secondary-color,
+    "box-darkblue": $third-color,
+    "box-smoke": $fourth-color,
+    "box-black": $fifth-color
+), $bg-colors);
+
+@each $name,$color in $bg-colors{
+    .#{$name}{
+        background-color: $color !important;
+    }
+}
+
+// BACKGROUNDS
+$btn-colors: () !default;
+$btn-colors: map-merge((
+    "btn-primary": $primary-color,
+    "btn-secondary": $secondary-color
+), $bg-colors);
+
+@each $name,$color in $btn-colors{
+    .#{$name}{
+        background-color: $color !important;
+    }
+}

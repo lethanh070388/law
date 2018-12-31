@@ -1,0 +1,24 @@
+body,html{
+    height: 100%;
+    background-color: $bg-body;
+    color: $dark-color;
+}
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+a{
+    color: $footer-link;
+    text-decoration: none !important;
+    @include transition();
+    font-weight: 400;
+    &:hover{
+        color: $footer-link-hover;
+        text-decoration: none !important;
+    }
+}

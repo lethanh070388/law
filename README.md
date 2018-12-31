@@ -1,1 +1,1 @@
-# law
+pug -w ./src/view/pages -o ./dist/html -P

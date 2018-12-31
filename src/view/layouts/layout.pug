@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        block title-page
+        //- Font Awesome
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous")
+        //- Bootstrap core CSS
+        link(href="../css/bootstrap.min.css" rel="stylesheet")
+        //- Addons
+        link(href="../css/addons/slick.min.css" rel="stylesheet")
+        //- Custom style
+        link(href="../css/app.css" rel="stylesheet")
+    body
+        include ../partials/nav.pug
+        block hero-banner
+        .main-content
+            block content
+        include ../partials/footer.pug
+        .scroll-top.d-flex.justify-content-center.align-items-center
+            i.fas.fa-arrow-up.fa-2x.text-white
+
+        //- JQuery
+        script(src="../js/jquery-3.3.1.min.js")
+        script(src="../js/popper.min.js")
+        script(src="../js/bootstrap.min.js")
+        script(src="../js/addons/slick.min.js")
+        script(src="../js/main.js")
+        block script-append
+        
+        

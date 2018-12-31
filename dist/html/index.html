@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../css/addons/slick.min.css" rel="stylesheet"/>
+    <link href="../css/app.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="main-header fixed-top">
+      <div class="container-fluid bg-light-blue header-menu">
+        <div class="container d-flex px-0">
+          <ul class="nav d-none d-md-flex">
+            <li class="nav-item"><a class="nav-link pl-0" href="#"><i class="fas fa-phone pr-1"></i>(028) 3930 3279</a></li>
+            <li class="nav-item"><a class="nav-link pl-0" href="#"><i class="fas fa-mobile-alt pr-1"></i>0906 22 99 66 | 0838 22 99 66 </a></li>
+          </ul>
+          <ul class="nav ml-auto pr-2">
+            <li class="nav-item"><a class="nav-link" href="#">Sơ đồ website</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Giới thiệu</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Hướng dẫn</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">RSS</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Widget</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin"><i class="fas fa-user pr-1"></i>User</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar navbar-expand-md navbar-dark bg-dark scrolling-navbar">
+        <div class="container px-0"><a class="navbar-brand" href="./index.html"><span class="text-uppercase">Thư viện pháp luật</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="#">Trang chủ<span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Dịch vụ</a></li>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownNews" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tin tức</a>
+                <div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdownNews">
+                  <div class="container px-0">
+                    <div class="row pt-3">
+                      <div class="col-md-4 mb-3">
+                        <h5> <a href="#">Thông báo văn bản mới</a></h5>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <h5> <a href="#">Hiệp định thương mại</a></h5>
+                        <ul>
+                          <li><a href="#">Hiệp định TPP</a></li>
+                          <li><a href="#">Hiệp định EVFTA</a></li>
+                          <li><a href="#">Hiệp định RCEP</a></li>
+                          <li><a href="#">Hiệp định CPTPP</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <h5> <a href="#">Thời sự</a></h5>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <h5> <a href="#">Chính sách mới</a></h5>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <h5> <a href="#">Án lệ</a></h5>
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <h5> <a href="#">Tư vấn của luật sư</a></h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="./login.html">Cộng đồng</a></li>
+              <li class="nav-item"><a class="nav-link" href="./login.html">Liên hệ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title w-100 text-center text-white font-bolder" id="modalLoginLabel">Login</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="text-white" aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form class="form-group needs-validation pt-4" action="#" novalidate="novalidate">
+              <div class="form-group">
+                <input class="form-control" type="text" aria-describedby="username" placeholder="Tên đăng nhập hoặc email" required="required"/>
+                <div class="invalid-feedback">Sai tên đăng nhập hoặc email</div>
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="text" aria-describedby="password" placeholder="Nhập password" required="required"/>
+                <div class="invalid-feedback">Sai password</div>
+              </div>
+              <div class="form-group text-right">
+                <button class="btn btn-outline-primary" type="submit">Đăng nhập</button>
+              </div>
+              <div class="form-group text-right"><a class="text-blue nowrap" href="./forget_password.html">Quên mật khẩu?</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner"></div>
+    <div class="main-content">
+      <div class="container-fluid search-wrapper">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="text-white font-bolder text-uppercase text-center py-4">Tra cứu</h2>
+              <div class="custom-tabs">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item"><a class="active" data-toggle="tab" href="#tabVB">Văn bản</a></li>
+                  <li class="nav-item"><a data-toggle="tab" href="#tabDT">Dự Thảo</a></li>
+                  <li class="nav-item"><a data-toggle="tab" href="#tabCV">Công văn</a></li>
+                  <li class="nav-item"><a data-toggle="tab" href="#tabTC">Tiêu chuẩn</a></li>
+                  <li class="nav-item"><a data-toggle="tab" href="#tabVP">Vi phạm</a></li>
+                  <li class="nav-item"><a data-toggle="tab" href="#tabTN">Thuật ngữ</a></li>
+                </ul>
+                <div class="tab-content p-1 p-sm-3">
+                  <div class="container tab-pane active p-0" id="tabVB">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <p>Từ khoá: Số Hiệu, Tiêu đề hoặc Nội dung ngắn gọn của Văn Bản...</p>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Tìm kiếm</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="tabDT">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <p>Từ khoá: Số Hiệu, Tiêu đề hoặc Nội dung ngắn gọn của Dự thảo...</p>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Tìm kiếm</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="tabCV">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <p>Từ khoá: Số Hiệu, Tiêu đề hoặc Nội dung ngắn gọn của Công văn...</p>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Tìm kiếm</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="tabTC">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <p>Từ khoá: Số Hiệu, Tiêu đề hoặc Nội dung ngắn gọn của Tiêu Chuẩn Việt Nam...</p>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Tìm kiếm</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="tabVP">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <p>Tra cứu xử phạt vi phạm hành chính</p>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Tìm kiếm</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container tab-pane p-0" id="tabTN">
+                    <div class="row no-gutters">
+                      <div class="col">
+                        <p>Tìm theo thuật ngữ Pháp luật</p>
+                        <div class="input-group mb-3">
+                          <input class="form-control" type="email" placeholder="Tìm văn bản pháp luật" aria-label="Enter your mail" aria-describedby="button-addon2"/>
+                          <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="button-addon2">Tìm kiếm</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="news-event">
+          <div class="wrapper">
+            <div class="news-left">
+              <h2>
+                 Thông báo &amp; <br/>Thời sự pháp luật</h2>
+              <p><a class="pl-3" href="#">Xem tất cả bản tin</a></p>
+            </div>
+          </div>
+          <div class="news-slider">
+            <div class="news-list"><a href="#">
+                <div class="news-type">Thông báo văn bản mới</div>
+                <h3>Xác định giá trong hoạt động quy hoạch</h3>
+                <p>Ngày 15/11/2018, Bộ Tài chính ban hành Thông tư 113/2018/TT-BTC quy định về xác định giá trong hoạt động quy hoạch được sử dụng từ vốn đầu tư công và ...</p></a></div>
+            <div class="news-list"><a href="#">
+                <div class="news-type">Thời sự pháp luật</div>
+                <h3>Toàn cảnh chương trình giáo dục phổ thông mơi</h3>
+                <p>lChiều 27-12, Bộ GD-ĐT công bố chương trình giáo dục phổ thông mới. Chương trình được xây dựng theo mô hình phát triển năng lực...</p></a></div>
+            <div class="news-list"><a href="#">
+                <div class="news-type">Thông báo văn bản mới</div>
+                <h3>Hướng dẫn hồ sơ hưởng chế độ người có công đang ở nước ngoài</h3>
+                <p>Bộ Quốc phòng ban hành Thông tư 170/2018/TT-BQP hướng dẫn Nghị định 102/2018/NĐ-CP về chế độ hỗ trợ người Việt Nam có công với cách mạng...</p></a></div>
+            <div class="news-list"><a href="#">
+                <div class="news-type">Thời sự pháp luật</div>
+                <h3>Tháo điểm nghẽn PPP để hút FDI vào cơ sở hạ tầng</h3>
+                <p>Ngày 10/5/2018, Chính phủ đã có Nghị quyết số 54/NQ-CP thông qua các chính sách của đề nghị xây dựng Dự án Luật PPP và ...</p></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid bg-section-dark mt-3">
+        <div class="container px-0">
+          <div class="row no-gutters">
+            <div class="col d-flex flex-nowrap">
+              <aside class="sidebar">
+                <ul class="nav flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#">Tra cứu văn bản</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Tra cứu dự thảo</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Văn bản mới ban hành</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Tra cứu tiêu chuẩn</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Tra cứu xử phạt vi phạm hành chính</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Luật sư toàn quốc</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Thuật ngữ pháp lý</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Biểu thuế WTO</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Biểu thuế ASEAN</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Bảng giá đất</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Website ngành luật</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">HTKK - Hỗ trợ kê khai</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Tra cứu mẫu hợp đồng</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Hiệp định CPTPP</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#">Cộng đồng ASEAN</a></li>
+                </ul>
+              </aside>
+              <div class="content-wrapper pl-3">
+                <div class="tab-wrapper">
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item"><a class="active" data-toggle="tab" href="#tabVBPL">Văn bản Pháp Luật mới</a></li>
+                    <li class="nav-item"><a data-toggle="tab" href="#tabCVM">Công văn mới</a></li>
+                    <li class="nav-item"><a data-toggle="tab" href="#tabTCVN">Tiêu chuẩn (TCVN) mới</a></li>
+                    <li class="nav-item"><a data-toggle="tab" href="#tabDTM">Dự thảo mới</a></li>
+                  </ul>
+                  <div class="tab-content p-1 p-sm-3">        
+                    <div class="container tab-pane active p-0" id="tabVBPL">
+                      <div class="row no-gutters">
+                        <div class="col">
+                          <div class="article">
+                            <div class="article_order">1</div>
+                            <div class="article_content">
+                              <div class="article_title">Thông báo 476/TB-VPCP năm 2018 về ý kiến kết luận của Phó Thủ tướng Vương Đình Huệ tại cuộc họp về nội dung Sách trắng Doanh nghiệp Việt Nam năm 2017 do Văn phòng Chính phủ ban hành</div>
+                              <div class="article_control"><a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>
+                                 Tình trạng: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                          <div class="article">
+                            <div class="article_order">2</div>
+                            <div class="article_content">
+                              <div class="article_title">Thông tư 32/2018/TT-BGDĐT về Chương trình giáo dục phổ thông do Bộ trưởng Bộ Giáo dục và Đào tạo ban hành</div>
+                              <div class="article_control"><a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>
+                                 Tình trạng: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                          <div class="article">
+                            <div class="article_order">3</div>
+                            <div class="article_content">
+                              <div class="article_title">Thông tư 29/2018/TT-BLĐTBXH về Quy chuẩn kỹ thuật quốc gia về an toàn lao động khi làm việc trong không gian hạn chế do Bộ trưởng Bộ Lao động - Thương binh và Xã hội ban hành</div>
+                              <div class="article_control"><a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>
+                                 Tình trạng: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                          <div class="article">
+                            <div class="article_order">4</div>
+                            <div class="article_content">
+                              <div class="article_title">Chỉ thị 11/CT-UBND năm 2018 về tăng cường chỉ đạo tổ chức Tổng điều tra dân số và nhà ở năm 2019 trên địa bàn tỉnh Hà Nam</div>
+                              <div class="article_control">   <a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>
+                                 Tình trạng: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                          <div class="article">
+                            <div class="article_order">5</div>
+                            <div class="article_content">
+                              <div class="article_title">Quyết định 5382/QĐ-UBND năm 2018 về phê duyệt Đề án phát triển vận tải hành khách bằng xe taxi, xe điện trên địa bàn tỉnh Quảng Ninh đến năm 2020, tầm nhìn đến năm 2030</div>
+                              <div class="article_control">   <a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>
+                                 Tình trạng: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container tab-pane p-0" id="tabCVM">
+                      <div class="row no-gutters">
+                        <div class="col">
+                          <div class="article">
+                            <div class="article_order">1</div>
+                            <div class="article_content">
+                              <div class="article_title">Công văn 12539/VPCP-CN năm 2018 về chỉ đạo kiểm tra bảo đảm an toàn hàng không do Văn phòng Chính phủ ban hành</div>
+                              <div class="article_control"><a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                          <div class="article">
+                            <div class="article_order">2</div>
+                            <div class="article_content">
+                              <div class="article_title">Công văn 84485/CT-TTHT năm 2018 về chính sách thuế thu nhập doanh nghiệp do Cục Thuế thành phố Hà Nội ban hành</div>
+                              <div class="article_control"><a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                          <div class="article">
+                            <div class="article_order">3</div>
+                            <div class="article_content">
+                              <div class="article_title">Công văn 12527/VPCP-KSTT năm 2018 về xử lý thông tin báo chí phản ánh hành vi gây khó khăn cho người dân trong giải quyết thủ tục đăng ký khai tử do Văn phòng Chính phủ ban hành</div>
+                              <div class="article_control"><a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                          <div class="article">
+                            <div class="article_order">4</div>
+                            <div class="article_content">
+                              <div class="article_title">Công văn 5420/LĐTBXH-VP năm 2018 công bố lịch tiếp công dân của Bộ trưởng năm 2019 do Bộ Lao động - Thương binh và Xã hội ban hành</div>
+                              <div class="article_control">   <a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                          <div class="article">
+                            <div class="article_order">5</div>
+                            <div class="article_content">
+                              <div class="article_title">Công văn 7585/TCHQ-TXNK năm 2018 về cấn trừ lệ phí hải quan hàng xuất nhập khẩu trị giá thấp trên hệ thống VNACCS do Tổng cục Hải quan ban hành</div>
+                              <div class="article_control">   <a href="#">Tiếng Anh</a><a href="#">Văn bản gốc</a><a href="#">Lược đồ </a><a href="#">Liên quan hiệu lực</a><a href="#">Tải về</a></div>
+                            </div>
+                            <div class="article_status"><span>Ban hành: 26/12/2018</span><span>
+                                 Hiệu lực: <a class="text-tomato" href="#">Đã biết</a></span><span>Cập nhật: 28/12/2018</span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container tab-pane p-0" id="tabTCVN">
+                      <div class="row no-gutters">
+                        <div class="col">
+                          <h1>tab 3 content</h1>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container tab-pane p-0" id="tabDTM">
+                      <div class="row no-gutters">
+                        <div class="col">
+                          <h1>tab 4 content</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row boxes justify-content-between">
+          <div class="box box-blue">
+            <h2 class="font-bolder text-shadow">Luật sư <br/>tư vấn</h2><a class="btn btn-outline-primary" href="#">Xem thêm</a>
+          </div>
+          <div class="box box-darkblue">
+            <h2 class="font-bolder text-shadow">
+               Pháp lý <br/>khởi nghiệp</h2><a class="btn btn-outline-primary" href="#">Xem thêm</a>
+          </div>
+          <div class="box box-smoke">
+            <h2 class="font-bolder text-shadow">Hỏi đáp <br/>Pháp luật</h2><a class="btn btn-outline-primary" href="#">Xem thêm</a>
+          </div>
+          <div class="box box-black">
+            <h2 class="font-bolder text-shadow">Bản án <br/>online</h2><a class="btn btn-outline-primary" href="#">Xem thêm</a>
+          </div>
+        </div>
+      </div>
+      <div class="container"></div>
+    </div>
+    <div class="container-fluid bg-footer py-2 py-sm-3 py-md-4">
+      <div class="container footer pt-2 pt-sm-3 pt-md-4">
+        <div class="row justify-content-between text-white no-gutters">
+          <div class="col-sm-12 col-md mb-3 pr-md-3">
+            <h5 class="font-bold pt-0">THƯ VIỆN PHÁP LUẬT</h5>
+            <div class="pb-2"> <i class="fas fa-map-marker-alt pr-1"></i>17 Nguyễn Gia Thiều, P.6, Q.3, TP.HCM</div>
+            <div class="pb-2"> <i class="fas fa-phone pr-1"></i>(028) 3930 3279</div>
+            <div class="pb-2"> <i class="fas fa-envelope pr-1"></i><a href="mailto:info@thuvienphapluat.vn">info@thuvienphapluat.vn</a></div>
+          </div>
+          <div class="col-sm mb-3 pr-md-3">
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Liên hệ</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Gói dịch vụ online</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Phần mềm Thư viện Pháp Luật</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Hướng dẫn sử dụng</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Giới thiệu</a></div>
+          </div>
+          <div class="col-sm mb-3 pr-md-3">
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Lưu trữ</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Đăng ký thành viên</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Thỏa ước dịch vụ</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Tra cứu pháp luật</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Tra cứu công văn</a></div>
+          </div>
+          <div class="col-sm mb-3">
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Tìm kiếm luật sư</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Tra cứu tiêu chuẩn Việt Nam</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Cộng đồng ngành luật</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Biểu thuế WTO</a></div>
+            <div class="pb-2"><i class="fas fa-chevron-circle-right pr-1"></i><a href="#">Bảng giá đất</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-copy-right">
+      <div class="container">
+        <div class="row">
+          <div class="col py-2 text-white text-center copy-right"><small>Bản quyền &copy; 2018 THƯ VIỆN PHÁP LUẬT, theo Giấy Chứng nhận số: 1802/2006/QTG của Bộ VHTT. Đơn vị chủ quản: Công ty cổ phần LawSoft. <br/>Giấy phép số: 37/GP-TTĐT, do Sở TTTT TP. HCM cấp ngày 20/04/2015, thay thế Giấy phép số 61/GP-TTĐT, do Bộ TTTT cấp ngày 04/06/2009, và thay thế Giấy phép số 73/GP-BC do Bộ VHTT cấp ngày 30/03/2006. <br/>Chịu trách nhiệm chính: Ông Bùi Tường Vũ</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-top d-flex justify-content-center align-items-center"><i class="fas fa-arrow-up fa-2x text-white"></i></div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/addons/slick.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+      /*** Slick Slider for News & Events ***/
+      $('.news-slider').slick({
+          dots: false,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          variableWidth: true,
+          responsive: [
+              {
+                  breakpoint: 1025,
+                  settings: {
+                      slidesToShow: 2,
+                      slidesToScroll: 1,
+                      infinite: true,
+                      dots: false
+                  }
+              },
+              {
+                  breakpoint: 767,
+                  settings: {
+                      slidesToShow: 1,
+                      slidesToScroll: 1,
+                      infinite: true,
+                      dots: false,
+                      variableWidth: false
+                  }
+              },
+          ]
+      });
+    </script>
+  </body>
+</html>
