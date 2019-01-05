@@ -32,15 +32,18 @@ $footer-link-hover: #ffa726;
 
 // END TEST COLORS
 
+
+
 // TEXTs
 $text-colors: () !default;
 $text-colors: map-merge((
-    "text-green": $green,
+    "text-green": $primary-color,
     "text-olive": $olive,
     "text-orange": $orange,
     "text-tomato": $tomato,
     "text-blue": $third-color,
-    "text-white": $white
+    "text-white": $white,
+    "text-lightblue": $secondary-color
 ), $text-colors);
 
 @each $name,$color in $text-colors{
@@ -61,7 +64,9 @@ $bg-colors: map-merge((
     "box-blue": $secondary-color,
     "box-darkblue": $third-color,
     "box-smoke": $fourth-color,
-    "box-black": $fifth-color
+    "box-black": $fifth-color,
+    "bg-lightgrey": $bg-body,
+    "bg-content-wrapper": $bg-content-wrapper
 ), $bg-colors);
 
 @each $name,$color in $bg-colors{
@@ -70,7 +75,7 @@ $bg-colors: map-merge((
     }
 }
 
-// BACKGROUNDS
+// BUTTONS
 $btn-colors: () !default;
 $btn-colors: map-merge((
     "btn-primary": $primary-color,

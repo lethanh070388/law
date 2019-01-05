@@ -11,22 +11,21 @@ html(lang="en")
         link(href="../css/bootstrap.min.css" rel="stylesheet")
         //- Addons
         link(href="../css/addons/slick.min.css" rel="stylesheet")
+        link(href="../css/addons/jquery.mCustomScrollbar.min.css" rel="stylesheet")
         //- Custom style
         link(href="../css/app.css" rel="stylesheet")
     body
-        include ../partials/nav_static.pug
-        block hero-banner
-        .main-content
-            block content
-        include ../partials/footer.pug
-        .scroll-top.d-flex.justify-content-center.align-items-center
-            i.fas.fa-arrow-up.fa-2x.text-white
-
+        .main-wrapper
+            include ../partials/nav_static.pug
+            .main-content
+                block content
+            include ../partials/footer_collapsed.pug
         //- JQuery
         script(src="../js/jquery-3.3.1.min.js")
         script(src="../js/popper.min.js")
         script(src="../js/bootstrap.min.js")
         script(src="../js/addons/slick.min.js")
+        script(src="../js/addons/jquery.mCustomScrollbar.concat.min.js")
         script(src="../js/main.js")
         block script-append
         
